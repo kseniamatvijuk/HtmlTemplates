@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flip</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/8425713696.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="card">
+        <input type="checkbox" id="flip-card" class="more" aria-hidden="true">
+        <div class="content">
+            <div class="front">
+                <div class="inner">
+                    <h2 class="title">Login</h2>
+                    <div class="form-container">
+                        <form id="loginForm" name="loginForm">
+                            <div class="form-group">
+
+                                <span class="input-item">
+                                    <i class="fa fa-user-circle"></i>
+                                </span>
+                                <input class="form-input" id="name-input" type="text" name="name" required
+                                    placeholder=".">
+                                <label class="form-lable" for="name"> Name</label>
+                            </div>
+                            <div class="form-group">
+                                <span class="input-item">
+                                    <i class="fa fa-key"></i>
+                                </span>
+                                <input class="form-input" type="password" id="pwd" name="password" required
+                                    placeholder=".">
+                                <label class="form-lable" for="password"> Password</label>
+                                <span>
+                                    <i class="fas fa-eye-slash" aria-hidden="true" type="button" id="eye"></i>
+                                </span>
+                            </div>
+                            <div class="form-group__buttons">
+                                <label for="flip-card" class="form-link" aria-hidden="true">
+                                    Forgot password
+                                </label>
+                                <button class="form-group__submit-button" type="submit" form="loginForm">Submit</button>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="social-container">
+                        <button class="form-group__social-button">
+                            <img src="images/google-plus.png" alt="g+">
+                        </button>
+                        <button class="form-group__social-button">
+                            <img src="images/instagram.png" alt="instagram">
+                        </button>
+                        <button class="form-group__social-button">
+                            <img src="images/linkedin.png" alt="linkedin">
+                        </button>
+                        <button class="form-group__social-button">
+                            <img src="images/facebook.png" alt="facebook">
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="back">
+                <div class="inner">
+                    <div class="form-container">
+                        <h2 class="title">Forgot password</h2>
+                        <form id="forgotPasswordForm">
+                            <div class="form-group">
+
+                                <span class="input-item">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <input class="form-input" id="txt-input" type="email" name="email" required
+                                    placeholder="a">
+                                <label class="form-lable" for="email"> Email</label>
+                            </div>
+                            <div class="form-group__buttons">
+                                <label for="flip-card" class="link-return" aria-hidden="true">
+                                    Back
+                                </label>
+                                <button class="form-group-button" type="submit" form="loginForm">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script src="js/main.js"></script>
+</body>
+
+</html>

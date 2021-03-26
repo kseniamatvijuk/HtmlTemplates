@@ -1,0 +1,253 @@
+/* remove if already */
+@import url("https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Helvetica, sans-serif;
+}
+
+.card {
+    width: 520px;
+    height: 400px;
+    margin: 1em;
+    perspective: 1500px;
+    font-size: 16px;
+}
+.card .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.75, 0, 0.85, 1);
+}
+.more {
+    display: none;
+}
+.more:checked ~ .content {
+    transform: rotateY(180deg);
+}
+.front,
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 6px;
+}
+.front .inner,
+.back .inner {
+    height: 100%;
+    padding: 1.5em;
+    transform: translateZ(80px) scale(0.94);
+}
+.front {
+    background-color: #fff;
+}
+.front:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 6px;
+    backface-visibility: hidden;
+    background: linear-gradient(40deg, #5d4954, #5d49545d);
+}
+.front .inner {
+    justify-items: center;
+}
+.front .form-link {
+    color: #fff;
+}
+
+.front .title {
+    color: #333333;
+    text-align: center;
+}
+.back {
+    transform: rotateY(180deg);
+    background-color: #fff;
+    border: 2px solid #f0f0f0;
+}
+.back .inner {
+    grid-template-rows: 1fr 2fr 1fr 2fr 14fr 1fr 1fr;
+    grid-template-columns: repeat(4, auto);
+    grid-column-gap: 0.8em;
+    justify-items: center;
+}
+
+.form-group {
+    color: #333;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid #5d4954;
+    height: 50px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    position: relative;
+}
+.form-group span{
+    width: 10%;
+    text-align: center;
+}
+.form-group span i#eye:hover{
+    cursor: pointer;
+}
+input[class="form-input"] {
+    position: relative;
+    height: 40px;
+    width: 90%;
+    padding: 15px;
+    font-size: 16px;
+    color: #725e64;
+    outline: none;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    transition: 0.2s linear;
+    filter: none;
+    background-color: transparent;
+}
+.form-group .input-item {
+    width: 10%;
+    text-align: center;
+}
+.back .form-group .form-lable {
+    position: absolute;
+    background-color: #fff;
+    padding: 3px 13px 3px 13px;
+    left: 10%;
+}
+
+input[class="form-input"]:focus + label.form-lable {
+    top: -1rem;
+}
+
+input[class="form-input"]:focus::placeholder {
+    color: transparent;
+}
+
+input[class="form-input"]:not(:placeholder-shown) + label {
+    top: -1rem;
+}
+
+.front .form-group .form-lable {
+    position: absolute;
+    padding: 3px 13px 3px 13px;
+    left: 10%;
+    pointer-events: none;
+}
+
+.front input[class="form-input"]#pwd:focus + label.form-lable {
+    background: linear-gradient(40deg, #82737b, #90828a);
+}
+.front input[class="form-input"]#pwd:not(:placeholder-shown) + label {
+    background: linear-gradient(40deg, #82737b, #90828a);
+}
+
+.front input[class="form-input"]#name-input:focus + label.form-lable {
+    background: linear-gradient(40deg, #8c7e86, #968990);
+}
+.front input[class="form-input"]#name-input:not(:placeholder-shown) + label {
+    background: linear-gradient(40deg, #8c7e86, #968990);
+}
+.form-group__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group__buttons .form-group__submit-button {
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 28px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #5d4954;
+}
+.form-group__buttons .form-link {
+    color: #333;
+    line-height: 41px;
+}
+.form-group__buttons .form-link:hover{
+    cursor: pointer;
+}
+.card button {
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+.card button:hover{
+    cursor: pointer;
+}
+.social-container {
+    display: flex;
+    margin-top: 2rem;
+    padding-top: 32px;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.social-container .form-group__social-button {
+    height: 32px;
+    width: 32px;
+}
+.social-container .form-group__social-button img {
+    height: 100%;
+}
+.back .inner {
+ display: flex;
+ align-items: center;
+ width: 100%;
+}
+.back .inner .form-container{
+    width: 100%;
+}
+.back .inner .form-container .title{
+    text-align: center;
+    color: #333;
+}
+.back .form-group__buttons{
+    margin-top: 40px;
+}
+.back .form-group__buttons .form-group-button{
+font-size: 16px;
+padding: 10px 28px;
+border-radius: 4px;
+border: 1px solid #333;
+}
+.back .form-group__buttons .link-return{
+    padding: 10px 28px;
+    border-radius: 4px;
+    border: 1px solid #333;
+}
+.back .form-group__buttons .link-return:hover{
+cursor: pointer;
+
+}
+
+/* this remove red border on  invalid or required*/
+input[class="form-input"]:required {
+    box-shadow:none;
+}
+input[class="form-input"]:invalid {
+    box-shadow:none;
+}
+
